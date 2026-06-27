@@ -1,0 +1,19 @@
+Package: descriptiveStats
+Type: Package
+Title: Descriptive Statistics Functions
+Version: 0.1.0
+Authors@R: 
+    person(
+        "Bira",
+        "Aziz Khan",
+        email = "bira.zulfiqar@gmail.com.com",
+        role = c("aut", "cre")
+    )
+Description: Functions for calculating descriptive statistics such as
+    mean, median, mode, quartiles and interquartile range.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.0.0
+
