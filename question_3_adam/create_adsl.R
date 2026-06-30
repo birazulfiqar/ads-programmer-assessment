@@ -22,6 +22,7 @@ library(lubridate)
 library(stringr)
 library(haven)
 library(labelled)
+library(here)
 
 # -----------------------------
 # Input data
@@ -329,9 +330,7 @@ adsl <- labelled::set_variable_labels(
 # -----------------------------
 # Export output
 # -----------------------------
-dir.create("output/question3", recursive = TRUE, showWarnings = FALSE)
-
-haven::write_xpt(adsl, "output/question3/adsl.xpt")
+haven::write_xpt(adsl, here("question_3_adam","output","adsl.xpt"))
 
 
 # =========================================================

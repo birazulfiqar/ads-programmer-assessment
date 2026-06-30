@@ -17,6 +17,7 @@ library(dplyr)
 library(gtsummary)
 library(pharmaverseadam)
 library(gt)
+library(here)
 
 # -----------------------------
 # Input data
@@ -87,7 +88,7 @@ ae_list_final |>
     locations = gt::cells_body()
   ) |>
   
-  gt::gtsave("output/ae_listings.html")
+  gt::gtsave(here("question_4_tlg","output","ae_listings.html"))
 
 # =========================================================
 # Question 4 - End of AE Listing

@@ -20,6 +20,7 @@ library(dplyr)
 library(ggplot2)
 library(pharmaverseadam)
 library(scales)
+library(here)
 
 # -----------------------------
 # Input data
@@ -87,7 +88,7 @@ p1 <- ggplot(
 # Create output
 # -----------------------------
 ggsave(
-  filename = "output/ae_severity_distribution.png",
+  filename = here("question_4_tlg","output","ae_severity_distribution.png"),
   plot = p1,
   width = 10,
   height = 6,
@@ -174,7 +175,7 @@ p2 <- ggplot(
 # Create output
 # -----------------------------
 ggsave(
-  filename = "output/top_10_ae_incidence.png",
+  filename = here("question_4_tlg","output","top_10_ae_incidence.png"),
   plot = p2,
   width = 10,
   height = 7,

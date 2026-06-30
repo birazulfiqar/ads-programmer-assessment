@@ -17,11 +17,12 @@ library(pharmaversesdtm)
 library(dplyr)
 library(haven)
 library(labelled)
+library(here)
 
 # -----------------------------
 # Read Study controlled terminology
 # -----------------------------
-study_ct <- read.csv("metadata/sdtm_ct.csv", stringsAsFactors = FALSE)
+study_ct <- read.csv(here("question_2_sdtm","metadata", "sdtm_ct.csv"), stringsAsFactors = FALSE)
 
 # -----------------------------
 # Input data
@@ -182,7 +183,7 @@ ds <- ds1 |>
     DSSTDY 
   )
 
-haven::write_xpt(data = ds, path = "output/ds.xpt")
+haven::write_xpt(data = ds, path = here("question_2_sdtm","output","ds.xpt"))
 
 # =========================================================
 # Question 2 - End of SDTM DS Domain Creation

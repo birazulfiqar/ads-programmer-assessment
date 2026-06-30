@@ -22,6 +22,7 @@ lubridate         : Date parsing utilities
 stringr           : String handling functions
 haven             : XPT export
 labelled          : Variable labeling
+here              : Reproducible file paths
 
 
 # Input Data
@@ -138,7 +139,7 @@ SITEID  : Site identifier
 
 Final ADSL dataset exported as:
 
-output/question3/adsl.xpt
+question_3_adam/output/adsl.xpt
 
 Contains:
 
@@ -153,6 +154,15 @@ ITTFL, ABNSBPFL, CARPOPFL,
 LSTALVDT
 
 
+In addition, the reference ADaM adverse events dataset
+(pharmaverseadam::adae) is exported as:
+
+question_3_adam/output/adae.csv
+
+This CSV file is provided as the input dataset for
+Question 5 (Clinical Data API).
+
+
 # Notes
 
 - ADMIRAL functions used for all time derivations and event-based logic
@@ -160,3 +170,7 @@ LSTALVDT
 - grepl is used for placebo identification to ensure case-insensitive matching
 - Only variables required for the assessment plus essential ADSL identifiers are included
 - Missing times in EXSTDTC/EXENDTC are imputed according to ADaM rules
+- The reference ADAE dataset from the pharmaverseadam package is also
+  exported as a CSV to support the FastAPI implementation in Question 5.
+- File paths are managed using the `here` package to ensure 
+  reproducibility and portability across different environments.

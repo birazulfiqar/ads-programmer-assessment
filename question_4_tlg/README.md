@@ -20,7 +20,7 @@ gt                 : HTML table formatting
 ggplot2            : Data visualization
 scales             : Percentage axis formatting
 pharmaverseadam    : ADAE and ADSL analysis datasets
-
+here               : Reproducible file paths
 
 # Input Data
 
@@ -138,3 +138,5 @@ output/top_10_ae_incidence.png
   presentation-ready outputs.
 - Visualizations are created using ggplot2 and exported at
   publication-quality resolution (300 dpi).
+- File paths are managed using the `here` package to ensure 
+  reproducibility and portability across different environments.

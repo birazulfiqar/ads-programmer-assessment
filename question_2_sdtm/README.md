@@ -19,6 +19,7 @@ pharmaversesdtm     : Reference DM dataset and study day derivations
 dplyr               : Data manipulation
 haven               : XPT export
 labelled            : Variable labels
+here                : Reproducible file paths
 
 # Input Data
 ds_raw0   : Raw disposition dataset
@@ -87,7 +88,7 @@ STUDYID + USUBJID + DSTERM + DSDECOD + DSSTDTC
 # Output
 
 Final SDTM DS dataset exported as:
-output/ds.xpt using haven::write_xpt()
+question_2_sdtm/output/ds.xpt using haven::write_xpt()
 
 Contains:
 STUDYID, DOMAIN, USUBJID, DSSEQ,
@@ -97,9 +98,13 @@ DSDTC, DSSTDTC,
 DSDY, DSSTDY
 
 
+
+
 # Notes
 
 - Controlled terminology filtered to study-specific values
 - VISITNUM derived from INSTANCE when not directly available
 - USUBJID constructed for assignment purposes
 - Date parsing assumes consistent m-d-y format
+- File paths are managed using the `here` package to ensure 
+  reproducibility and portability across different environments.

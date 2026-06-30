@@ -18,6 +18,8 @@ library(dplyr)
 library(gtsummary)
 library(pharmaverseadam)
 library(gt)
+library(here)
+
 
 # -----------------------------
 # Input data
@@ -86,7 +88,7 @@ tbl_ae |>
     style = gt::cell_text(weight = "bold"),
     locations = gt::cells_column_labels()
   ) |>  
-  gt::gtsave("output/ae_summary_table.html")
+  gt::gtsave(here("question_4_tlg","output","ae_summary_table.html"))
 
 # =========================================================
 # Question 4 - End of AE Summary Table Creation
